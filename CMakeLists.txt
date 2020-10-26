@@ -7,6 +7,8 @@ add_definitions(-std=c++11)
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS "${CXX_FLAGS}")
 
+file(GLOB HEADERS src/*.h)
+file(GLOB HEADERS_HPP src/*.hpp)
 set(sources src/PID.cpp src/main.cpp)
 
 include_directories(/usr/local/include)

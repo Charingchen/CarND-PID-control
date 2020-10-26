@@ -1,5 +1,10 @@
 #ifndef PID_H
 #define PID_H
+#include <vector>
+#include <iostream>
+using std::vector;
+
+enum TwiddleState {INIT, INCREMENT,DECREMENT};
 
 class PID {
  public:
@@ -30,6 +35,12 @@ class PID {
    * @output The total PID error
    */
   double TotalError();
+    
+    
+  void twiddle(double current_err);
+  void Init_p();
+  void move_index();
+  void print_output(double current_err);
 
  private:
   /**
@@ -45,6 +56,18 @@ class PID {
   double Kp;
   double Ki;
   double Kd;
+    
+  vector<double> dp;
+// Tolerance
+  double tol;
+  double best_err;
+  TwiddleState state;
+    
+  vector<double> p;
+    
+    int index = 0;
+    int iter = 0;
+  
 };
 
 #endif  // PID_H

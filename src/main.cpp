@@ -38,12 +38,15 @@ int main() {
    * TODO: Initialize the pid variable.
    */
     pid.Init(-0.09, -0.0005, -1.6);
+    pid.Init_p();
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, 
                      uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
     // The 4 signifies a websocket message
     // The 2 signifies a websocket event
+      
+    static double err_sum = 0.0;
     if (length && length > 2 && data[0] == '4' && data[1] == '2') {
       auto s = hasData(string(data).substr(0, length));
 
@@ -66,10 +69,13 @@ int main() {
            */
             pid.UpdateError(cte);
             steer_value = pid.TotalError();
+            err_sum += steer_value;
           // DEBUG
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value 
                     << std::endl;
-
+          // Run twiddle if the it finish running or run outside of the lane
+            
+            
           json msgJson;
           msgJson["steering_angle"] = steer_value;
           msgJson["throttle"] = 0.3;

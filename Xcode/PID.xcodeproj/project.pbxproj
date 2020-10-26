@@ -7,246 +7,171 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		98A5708849524F3A88B32F3D /* ALL_BUILD */ = {
+		1731CC87F69443D79702B8FC /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = BB770B83DDE04DD3A9D0B982 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = CD919D28B55F453DBEAA5990 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				A4CE9F47C4E1414CAF0B1A39 /* CMake Rules */,
-			);
-			dependencies = (
-				A0ACB338BC9247D8A245C880 /* PBXTargetDependency */,
-				45F2403D921A4BA2A57B09B6 /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
-		B08FF38EB8954161B790B693 /* ZERO_CHECK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = B0D89D70EE384A178DF4A350 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
-			buildPhases = (
-				54154E92E7CD482FB2409483 /* CMake Rules */,
+				BE53364BE5464032A4F0810F /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
+		75E5E0218FE8474981EAC411 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D1BB6373E70746259F8BCDED /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				80ED60FD4F8844CE8A23995C /* CMake Rules */,
+			);
+			dependencies = (
+				E1D85A74C0FE485884275B38 /* PBXTargetDependency */,
+				FC9568EB062E432EB67FC6EB /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		05F2E2BA67444830A7C15608 /* /Users/Charing/Code/PID-Control-Project/src/PID.cpp */ = {isa = PBXBuildFile; fileRef = 1E3D6C902EB84FAF92996523 /* /Users/Charing/Code/PID-Control-Project/src/PID.cpp */; };
-		89C54A0B544C486686391BCB /* /Users/Charing/Code/PID-Control-Project/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 40A7BE75A51B4ADD881061A2 /* /Users/Charing/Code/PID-Control-Project/src/main.cpp */; };
-		A1A44356E6274BD9B5AF3C76 /* /Users/Charing/Code/PID-Control-Project/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 7097903F665C4BADBC80EA2C /* /Users/Charing/Code/PID-Control-Project/CMakeLists.txt */; };
+		17C10A94A5304463883C4166 /* PID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D75CC3C1CD74C1C9FBB67E7 /* PID.cpp */; };
+		C498AAB4E159444FA0E00925 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7B2B8B83A514A39B042356C /* main.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		49CF953AD2094495B4F12D12 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		71C6059A762E4102A6F193E8 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		FE1840BCAFC441A1BF664868 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		FED0B4B66A704778A146C478 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXContainerItemProxy section */
-		8705DDEE05954FC98EC545E7 /* PBXContainerItemProxy */ = {
+		3050D13E246F4BC2A8A00089 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AF19A8ED92FA46629EEDE4A9 /* Project object */;
+			containerPortal = 693119DF87C14C29B196C534 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B08FF38EB8954161B790B693;
+			remoteGlobalIDString = 1731CC87F69443D79702B8FC;
 			remoteInfo = ZERO_CHECK;
 		};
-		D729EC62C4EF4D42BBE97617 /* PBXContainerItemProxy */ = {
+		541C23856EAE4B0583D7DF59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AF19A8ED92FA46629EEDE4A9 /* Project object */;
+			containerPortal = 693119DF87C14C29B196C534 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B08FF38EB8954161B790B693;
+			remoteGlobalIDString = 1731CC87F69443D79702B8FC;
 			remoteInfo = ZERO_CHECK;
 		};
-		E296696CB6304A09B7C9E628 /* PBXContainerItemProxy */ = {
+		D31DB2EBC1B248E3AC2BB5AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AF19A8ED92FA46629EEDE4A9 /* Project object */;
+			containerPortal = 693119DF87C14C29B196C534 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 79DFF341B85D4D79A3C0401A;
+			remoteGlobalIDString = 1EC15F17E9F643F4963F75A5;
 			remoteInfo = pid;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E3D6C902EB84FAF92996523 /* /Users/Charing/Code/PID-Control-Project/src/PID.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PID.cpp; path = src/PID.cpp; sourceTree = SOURCE_ROOT; };
-		40A7BE75A51B4ADD881061A2 /* /Users/Charing/Code/PID-Control-Project/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		7097903F665C4BADBC80EA2C /* /Users/Charing/Code/PID-Control-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		71DF02D5644E458180347C9A /* pid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = pid; sourceTree = BUILT_PRODUCTS_DIR; };
-		89AD0627D3334D36B4D43945 /* /Users/Charing/Code/PID-Control-Project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4D75CC3C1CD74C1C9FBB67E7 /* PID.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PID.cpp; path = src/PID.cpp; sourceTree = SOURCE_ROOT; };
+		56DDE3BBAA8149CA827F7CDC /* pid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = pid; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E8BB2E2547712100741943 /* PID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PID.h; path = src/PID.h; sourceTree = "<group>"; };
+		77C0A04FCC3E4EDCBC8A222D /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C7B2B8B83A514A39B042356C /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		FA2E963A7835401B9CD1BB21 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		40F98B94804B440CB489D899 /* Products */ = {
+		4762F292E3684EC8A08F8F17 /* pid */ = {
 			isa = PBXGroup;
 			children = (
-				71DF02D5644E458180347C9A /* pid */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		69E21CFDF4484E1E983475CA /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				1E3D6C902EB84FAF92996523 /* /Users/Charing/Code/PID-Control-Project/src/PID.cpp */,
-				40A7BE75A51B4ADD881061A2 /* /Users/Charing/Code/PID-Control-Project/src/main.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		753946B6F59B4E9BBB13E704 = {
-			isa = PBXGroup;
-			children = (
-				BB8E46B9B2A74A6588891FEC /* pid */,
-				7DDB33F7FED749158D417B69 /* ALL_BUILD */,
-				40F98B94804B440CB489D899 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		7DDB33F7FED749158D417B69 /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				F0A96DE1426A42F2A230F4B3 /* CMake Rules */,
-				89AD0627D3334D36B4D43945 /* /Users/Charing/Code/PID-Control-Project/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		BB8E46B9B2A74A6588891FEC /* pid */ = {
-			isa = PBXGroup;
-			children = (
-				69E21CFDF4484E1E983475CA /* Source Files */,
-				7097903F665C4BADBC80EA2C /* /Users/Charing/Code/PID-Control-Project/CMakeLists.txt */,
+				C9B34AF0AA6943EDB0F62805 /* Source Files */,
+				FA2E963A7835401B9CD1BB21 /* CMakeLists.txt */,
 			);
 			name = pid;
 			sourceTree = "<group>";
 		};
-		F0A96DE1426A42F2A230F4B3 /* CMake Rules */ = {
+		60B347B2104E4762AAB9A3DF /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				6249BBC6B25449A29846B8EB /* CMake Rules */,
+				77C0A04FCC3E4EDCBC8A222D /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		6249BBC6B25449A29846B8EB /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		9300DD1EB8E84A60895CE750 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56DDE3BBAA8149CA827F7CDC /* pid */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C382868F1CF44E42B4528D94 = {
+			isa = PBXGroup;
+			children = (
+				4762F292E3684EC8A08F8F17 /* pid */,
+				60B347B2104E4762AAB9A3DF /* ALL_BUILD */,
+				9300DD1EB8E84A60895CE750 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9B34AF0AA6943EDB0F62805 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D75CC3C1CD74C1C9FBB67E7 /* PID.cpp */,
+				C7B2B8B83A514A39B042356C /* main.cpp */,
+				71E8BB2E2547712100741943 /* PID.h */,
+			);
+			name = "Source Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		79DFF341B85D4D79A3C0401A /* pid */ = {
+		1EC15F17E9F643F4963F75A5 /* pid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 590C0D1B867C4813BD87EA0F /* Build configuration list for PBXNativeTarget "pid" */;
+			buildConfigurationList = BABE888D159E405C870A2E77 /* Build configuration list for PBXNativeTarget "pid" */;
 			buildPhases = (
-				E4CE88858CB94D6AB148CD2A /* Sources */,
+				CC1F0BE9BBCB444DB3A4E109 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				879A867A37A74652840083DF /* PBXTargetDependency */,
+				3C4EEC66488A4A43ADCB01B0 /* PBXTargetDependency */,
 			);
 			name = pid;
 			productName = pid;
-			productReference = 71DF02D5644E458180347C9A /* pid */;
+			productReference = 56DDE3BBAA8149CA827F7CDC /* pid */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AF19A8ED92FA46629EEDE4A9 /* Project object */ = {
+		693119DF87C14C29B196C534 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1010;
 			};
-			buildConfigurationList = 40BBB906DBD349E6AC6F96C7 /* Build configuration list for PBXProject "PID" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				FE1840BCAFC441A1BF664868 /* Debug */,
-				71C6059A762E4102A6F193E8 /* Release */,
-				49CF953AD2094495B4F12D12 /* MinSizeRel */,
-				FED0B4B66A704778A146C478 /* RelWithDebInfo */,
-			);
+			buildConfigurationList = 6ACC4A82B5F64560A7A7C9A9 /* Build configuration list for PBXProject "PID" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
-			mainGroup = 753946B6F59B4E9BBB13E704;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C382868F1CF44E42B4528D94;
 			projectDirPath = ../;
 			projectRoot = "";
 			targets = (
-				98A5708849524F3A88B32F3D /* ALL_BUILD */,
-				B08FF38EB8954161B790B693 /* ZERO_CHECK */,
-				79DFF341B85D4D79A3C0401A /* pid */,
+				75E5E0218FE8474981EAC411 /* ALL_BUILD */,
+				1731CC87F69443D79702B8FC /* ZERO_CHECK */,
+				1EC15F17E9F643F4963F75A5 /* pid */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		43ECDCC9CB3E4F959912B9C5 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		54154E92E7CD482FB2409483 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/Charing/Code/PID-Control-Project/Xcode -f /Users/Charing/Code/PID-Control-Project/Xcode/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
-			showEnvVarsInLog = 0;
-		};
-		602BB93216F941F9A71D41BA = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		A4CE9F47C4E1414CAF0B1A39 /* CMake Rules */ = {
+		80ED60FD4F8844CE8A23995C /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,66 +182,91 @@ exit 0";
 			shellScript = "make -C /Users/Charing/Code/PID-Control-Project/Xcode -f /Users/Charing/Code/PID-Control-Project/Xcode/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
+		BE53364BE5464032A4F0810F /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/Charing/Code/PID-Control-Project/Xcode -f /Users/Charing/Code/PID-Control-Project/Xcode/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E4CE88858CB94D6AB148CD2A /* Sources */ = {
+		CC1F0BE9BBCB444DB3A4E109 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F2E2BA67444830A7C15608 /* /Users/Charing/Code/PID-Control-Project/src/PID.cpp */,
-				89C54A0B544C486686391BCB /* /Users/Charing/Code/PID-Control-Project/src/main.cpp */,
+				17C10A94A5304463883C4166 /* PID.cpp in Sources */,
+				C498AAB4E159444FA0E00925 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		45F2403D921A4BA2A57B09B6 /* PBXTargetDependency */ = {
+		3C4EEC66488A4A43ADCB01B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B08FF38EB8954161B790B693 /* ZERO_CHECK */;
-			targetProxy = 8705DDEE05954FC98EC545E7 /* PBXContainerItemProxy */;
+			target = 1731CC87F69443D79702B8FC /* ZERO_CHECK */;
+			targetProxy = 541C23856EAE4B0583D7DF59 /* PBXContainerItemProxy */;
 		};
-		879A867A37A74652840083DF /* PBXTargetDependency */ = {
+		E1D85A74C0FE485884275B38 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B08FF38EB8954161B790B693 /* ZERO_CHECK */;
-			targetProxy = D729EC62C4EF4D42BBE97617 /* PBXContainerItemProxy */;
+			target = 1EC15F17E9F643F4963F75A5 /* pid */;
+			targetProxy = D31DB2EBC1B248E3AC2BB5AE /* PBXContainerItemProxy */;
 		};
-		A0ACB338BC9247D8A245C880 /* PBXTargetDependency */ = {
+		FC9568EB062E432EB67FC6EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 79DFF341B85D4D79A3C0401A /* pid */;
-			targetProxy = E296696CB6304A09B7C9E628 /* PBXContainerItemProxy */;
+			target = 1731CC87F69443D79702B8FC /* ZERO_CHECK */;
+			targetProxy = 3050D13E246F4BC2A8A00089 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3F2442942F624A9B976837AA /* RelWithDebInfo */ = {
+		01E7E8733DAA4B91930EDC63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
 				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1*/lib";
-				OTHER_CPLUSPLUSFLAGS = "-Wall        -DNDEBUG   -std=c++11";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
+				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = pid;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
 			};
-			name = RelWithDebInfo;
+			name = Release;
 		};
-		5FC199C1B8BA4C1292846C79 /* Debug */ = {
+		1996595DFED04A3FB8E3DACA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		1F92B96479494377B8E31A6A /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -324,165 +274,9 @@ exit 0";
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
 				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode/build";
 			};
-			name = Debug;
-		};
-		6933100EE07544A48142F2B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		718CCA9BDF4047FB9D18F4DC /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
 			name = RelWithDebInfo;
 		};
-		7A48A67D03DA484BA68637D0 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		84638C5176404C5FA8C90111 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		8ED5E0E2BA134EA69886600B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		922BC0342F884391A58DC6E0 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode/build";
-			};
-			name = MinSizeRel;
-		};
-		A1F2154890A14033BB8BB65E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1*/lib";
-				OTHER_CPLUSPLUSFLAGS = "-Wall     -DNDEBUG   -std=c++11";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = pid;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		B642E68A79D7403D94147323 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		B78310736C2149A8BC1FA26C /* MinSizeRel */ = {
+		222AD589EB32493FA7E60117 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -491,61 +285,52 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1*/lib";
-				OTHER_CPLUSPLUSFLAGS = "-Wall     -DNDEBUG   -std=c++11";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"/usr/local/Cellar/libuv/1*/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-DNDEBUG",
+					"-std=c++11",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = pid;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = MinSizeRel;
 		};
-		C6F12B01E09B496CA540532B /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode/build";
-			};
-			name = RelWithDebInfo;
-		};
-		CABE2763DF52477FAE918D32 /* Release */ = {
+		4B7040C0802743298338CEC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		D1D809090EDF4BB6AB7E8BBD /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -554,11 +339,138 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		4C66134534FA4D359AFEB9C7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		6C597B253D3B41DF844A7E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		7EDDA4F9B80842EE9735B260 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"/usr/local/Cellar/libuv/1*/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-DNDEBUG",
+					"-std=c++11",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = pid;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		987C705344D54A988BDF8C00 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = MinSizeRel;
 		};
-		F64380A3F3C246DB8C0E0C7D /* Debug */ = {
+		AB7679E6A4814DBD8D2B4ECA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		C3DA9C8E8263480B8DD0E422 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -567,24 +479,91 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1*/lib";
-				OTHER_CPLUSPLUSFLAGS = "-Wall      -std=c++11";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lz -lssl -luv -luWS";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"/usr/local/Cellar/libuv/1*/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-std=c++11",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = pid;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = Debug;
 		};
-		FBFE29236CA84E98ABE38C76 /* Release */ = {
+		C9F250A2EF504115BB815739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"/usr/local/Cellar/libuv/1*/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-DNDEBUG",
+					"-std=c++11",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = pid;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		E3D23D624BCE448FBE6172C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -594,54 +573,94 @@ exit 0";
 			};
 			name = Release;
 		};
+		E887E2C40B09442085648347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		F437361758C54C1AA68334CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode/build";
+			};
+			name = Debug;
+		};
+		F7854A674B934778B7E3DFD9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/Charing/Code/PID-Control-Project/Xcode/build";
+			};
+			name = MinSizeRel;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40BBB906DBD349E6AC6F96C7 /* Build configuration list for PBXProject "PID" */ = {
+		6ACC4A82B5F64560A7A7C9A9 /* Build configuration list for PBXProject "PID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FC199C1B8BA4C1292846C79 /* Debug */,
-				FBFE29236CA84E98ABE38C76 /* Release */,
-				922BC0342F884391A58DC6E0 /* MinSizeRel */,
-				C6F12B01E09B496CA540532B /* RelWithDebInfo */,
+				F437361758C54C1AA68334CD /* Debug */,
+				E3D23D624BCE448FBE6172C3 /* Release */,
+				F7854A674B934778B7E3DFD9 /* MinSizeRel */,
+				1F92B96479494377B8E31A6A /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		590C0D1B867C4813BD87EA0F /* Build configuration list for PBXNativeTarget "pid" */ = {
+		BABE888D159E405C870A2E77 /* Build configuration list for PBXNativeTarget "pid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F64380A3F3C246DB8C0E0C7D /* Debug */,
-				A1F2154890A14033BB8BB65E /* Release */,
-				B78310736C2149A8BC1FA26C /* MinSizeRel */,
-				3F2442942F624A9B976837AA /* RelWithDebInfo */,
+				C3DA9C8E8263480B8DD0E422 /* Debug */,
+				C9F250A2EF504115BB815739 /* Release */,
+				222AD589EB32493FA7E60117 /* MinSizeRel */,
+				7EDDA4F9B80842EE9735B260 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		B0D89D70EE384A178DF4A350 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		CD919D28B55F453DBEAA5990 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8ED5E0E2BA134EA69886600B /* Debug */,
-				CABE2763DF52477FAE918D32 /* Release */,
-				B642E68A79D7403D94147323 /* MinSizeRel */,
-				7A48A67D03DA484BA68637D0 /* RelWithDebInfo */,
+				6C597B253D3B41DF844A7E2D /* Debug */,
+				01E7E8733DAA4B91930EDC63 /* Release */,
+				1996595DFED04A3FB8E3DACA /* MinSizeRel */,
+				AB7679E6A4814DBD8D2B4ECA /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		BB770B83DDE04DD3A9D0B982 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		D1BB6373E70746259F8BCDED /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6933100EE07544A48142F2B2 /* Debug */,
-				84638C5176404C5FA8C90111 /* Release */,
-				D1D809090EDF4BB6AB7E8BBD /* MinSizeRel */,
-				718CCA9BDF4047FB9D18F4DC /* RelWithDebInfo */,
+				4B7040C0802743298338CEC6 /* Debug */,
+				E887E2C40B09442085648347 /* Release */,
+				987C705344D54A988BDF8C00 /* MinSizeRel */,
+				4C66134534FA4D359AFEB9C7 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AF19A8ED92FA46629EEDE4A9 /* Project object */;
+	rootObject = 693119DF87C14C29B196C534 /* Project object */;
 }

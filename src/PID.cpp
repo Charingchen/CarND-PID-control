@@ -4,7 +4,9 @@
  * TODO: Complete the PID class. You may add any additional desired functions.
  */
 
-PID::PID() {}
+PID::PID():
+dp{1,1,1},
+tol(0.2){}
 
 PID::~PID() {}
 
@@ -12,14 +14,17 @@ void PID::Init(double Kp_, double Ki_, double Kd_) {
   /**
    * TODO: Initialize PID coefficients (and errors, if needed)
    */
-    this-> Kp = Kp_;
-    this-> Ki = Ki_;
-    this-> Kd = Kd_;
+    Kp = Kp_;
+    Ki = Ki_;
+    Kd = Kd_;
     
     p_error = 0;
     i_error = 0;
     d_error = 0;
+}
 
+void PID::Init_p(){
+    p = {Kp,Kd,Ki};
 }
 
 void PID::UpdateError(double cte) {
@@ -37,7 +42,88 @@ double PID::TotalError() {
    * TODO: Calculate and return the total error
    */
   return p_error * Kp + i_error * Ki + d_error * Kd;  // TODO: Add your total error calc here!
+
+}
+
+void PID::twiddle(double current_err){
+    // Calculate sum of dp:
+    //https://stackoverflow.com/questions/3221812/how-to-sum-up-elements-of-a-c-vector
+    double sum = 0.0;
+    for (auto& n : dp)
+        sum += n;
     
+    if (sum > tol) {
+        switch (state) {
+            // Only enter once to init the best error with first error
+            case INIT:
+                best_err = current_err;
+                p[index] += dp[index];
+                state = INCREMENT;
+                break;
+                
+            case INCREMENT:
+                if ( current_err < best_err){
+                    best_err = current_err;
+                    // Increase this parameter and save it for next iteration
+                    dp[index] *= 1.1;
+                    
+                    //move to next parameter
+                    move_index();
+                    //Update value for next parameter
+                    p[index] += dp[index];
+                    // Stay at INCREMENT
+                }
+                else{
+                  // If the current error is big, move 1 dp[index] to the other direction and run again
+                  // *2 because we already add 1 from previous loop
+                    p[index] -= 2* dp[index];
+                    // Jump state to DECREMENT next loop
+                    state = DECREMENT;
+                }
+                break;
+                
+            case DECREMENT:
+                // Similar logic but if current error is still too big, using smaller decrement steps
+                if (current_err < best_err){
+                    best_err = current_err;
+                    // Increase this parameter and save it for next iteration
+                    dp[index] *= 1.1;
+                }
+                else{
+                    // Reset to originial P value
+                    p[index] += dp[index];
+                    // Decrease dp by a small step
+                    dp[index] *= 0.9;
+                }
+                
+                //move to next parameter
+                move_index();
+                
+                //Update value for next parameter
+                p[index] += dp[index];
+                
+                // Move back to INCREMENT to start over
+                state = INCREMENT;
+                
+                break;
+            
+        }
+        Init(p[0], p[1], p[2]);
+    }
     
 
+}
+
+void PID::print_output(double current_err){
+    std::cout << "Iteration #:" << iter
+    << " Best Error:"<< best_err <<" Current error:" << current_err
+    << " Current state:" << state
+    << "\nNext P:" << p[0] <<","<< p[1]<< ","<< p[2]
+    << std::endl;
+}
+                  
+void PID::move_index(){
+    index = (index + 1) % p.size();
+    // Count for iteration whenever index hit 0
+    if (index == 0) ++iter;
 }
