@@ -100,7 +100,7 @@ int main() {
                 run_counter += 1;
             
               // Run twiddle if the it finish running or run outside of the lane
-                if (run_counter > 800 || off_road){
+                if (run_counter > 1500 || off_road){
                     double average_err = err_sum/(run_counter - 100);
                     if (off_road){
                         average_err += 1000;

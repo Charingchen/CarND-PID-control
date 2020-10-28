@@ -126,7 +126,10 @@ void PID::print_output(double current_err){
 }
                   
 void PID::move_index(){
-    index = (index + 1) % p.size();
+    do {
+        index = (index + 1) % p.size();
+    }while(dp[index] < 0.001);
+    
     // Count for iteration whenever index hit 0
     if (index == 0) ++iter;
 }
