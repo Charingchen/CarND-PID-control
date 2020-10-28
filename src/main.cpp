@@ -39,8 +39,8 @@ int main() {
    *
    */
     
-    pid.Init(0.531, 0.0001, 10);
-    pid.Init_p({0,0,1});
+    pid.Init(0.8389, 0.000019, 10.6961);
+    pid.Init_p({0.0873269,0,0.79388});
    
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, 
@@ -52,7 +52,7 @@ int main() {
     static double err_sum = 0.0;
     static int run_counter = 0;
     static bool off_road = false;
-    static const bool run_twiddle = true;
+    static const bool run_twiddle = false;
       
     if (length && length > 2 && data[0] == '4' && data[1] == '2') {
       auto s = hasData(string(data).substr(0, length));
@@ -93,7 +93,7 @@ int main() {
                     off_road = true;
                 }
             }
-            
+
             run_counter += 1;
             if (run_twiddle){
               // Run twiddle if the it finish running or run outside of the lane
@@ -103,10 +103,10 @@ int main() {
                     if (off_road){
                         average_err += 1000;
                     }
-                    
+
                     pid.twiddle(average_err);
                     pid.print_output(average_err);
-                    
+
                     run_counter = 0;
                     err_sum = 0.0;
                     off_road = false;
@@ -114,7 +114,7 @@ int main() {
                     std::string msg("42[\"reset\", {}]");
                     ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
                     }
-                
+
                 }
             else{
                 if (run_counter > 3000){
@@ -123,7 +123,7 @@ int main() {
                     err_sum = 0.0;
                     off_road = false;
                 }
-            
+
             }
             
             
