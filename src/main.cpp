@@ -39,8 +39,8 @@ int main() {
    *
    */
     
-    pid.Init(0.8, 0.0001, 8);
-    pid.Init_p({0.278,0.0001,1.29147});
+    pid.Init(0.531, 0.0001, 10);
+    pid.Init_p({0,0,1});
    
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, 
@@ -83,25 +83,23 @@ int main() {
 //            << std::endl;
             if (steer_value > 1) steer_value = 1;
             else if (steer_value < -1) steer_value = -1;
+        
             
-            // make err positive and reward < 1 cte but power by 2
-            // DEBUG
-//            std::cout << "CTE: " << cte << " Steering Value: " << steer_value
-//            << std::endl;
-            if (run_twiddle){
-                // skip initial 100 cte, meaning only get only it is steablize
-                if (run_counter> 100){
-                    err_sum += cte*cte;
-                    if (cte > 5) {
-                        off_road = true;
-                    }
+            // skip initial 100 cte, meaning only get only it is steablize
+            if (run_counter> 100){
+                err_sum += cte*cte;
+                // If cte > 5 it means run of road
+                if (abs(cte)> 5) {
+                    off_road = true;
                 }
+            }
             
-                run_counter += 1;
-            
+            run_counter += 1;
+            if (run_twiddle){
               // Run twiddle if the it finish running or run outside of the lane
-                if (run_counter > 1500 || off_road){
-                    double average_err = err_sum/(run_counter - 100);
+                if (run_counter > 3000 || off_road){
+//                    double average_err = err_sum/(run_counter - 100);
+                    double average_err = err_sum;
                     if (off_road){
                         average_err += 1000;
                     }
@@ -115,7 +113,17 @@ int main() {
                     //Resetting simulator
                     std::string msg("42[\"reset\", {}]");
                     ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
+                    }
+                
                 }
+            else{
+                if (run_counter > 3000){
+                    std::cout<< " Accum error   "<<err_sum<<"\n";
+                    run_counter = 0;
+                    err_sum = 0.0;
+                    off_road = false;
+                }
+            
             }
             
             

@@ -21,6 +21,8 @@ void PID::Init(double Kp_, double Ki_, double Kd_) {
 }
 
 void PID::Init_p(vector<double> input_dp){
+    
+    // Only initialize errors once and keep them for next round of calculations
     p = {Kp,Ki,Kd};
     p_error = 0;
     i_error = 0;
@@ -41,6 +43,7 @@ void PID::UpdateError(double cte) {
 double PID::TotalError() {
   /**
    * TODO: Calculate and return the total error
+   * To make the PID value positive
    */
   return -p_error * Kp -i_error * Ki - d_error * Kd;  // TODO: Add your total error calc here!
 
@@ -128,7 +131,7 @@ void PID::print_output(double current_err){
 void PID::move_index(){
     do {
         index = (index + 1) % p.size();
-    }while(dp[index] < 0.001);
+    }while(dp[index] == 0);
     
     // Count for iteration whenever index hit 0
     if (index == 0) ++iter;
