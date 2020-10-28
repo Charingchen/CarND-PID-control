@@ -11,35 +11,44 @@ K_p|	Decrease	|Increase|	Small change|	Decrease	|Degrade
 K_i| Decrease	|Increase	|Increase	|Eliminate	|Degrade
 K_d|	Minor change|	Decrease|	Decrease	|No effect in theory	|Improve if K_d small
 
-
 ### Twiddle logic
-I am using a modified twiddle logic in this PID tuner. In order to achieve run twiddle only once every time gets the error readings, a state machine is used inside of for loop.
-There are three state, INIT: Initialize best err and update pid values by adding dp values, INCREMENT: Increment dp if a better error found, vis versa, DECREMENT: if fail second times in a row, decrement dp with 0.9
+I am using a modified twiddle logic in this PID tuner. To achieve run twiddle only once every time gets the error readings, a state machine is used inside of for loop.
+There are three states, INIT: Initialize best err and update PID values by adding dp values, INCREMENT: Increment dp if a better error found, vis versa, DECREMENT: if fail second times in a row, decrement dp with 0.9
 
 
-However, I was first thinking to run this logic every time I got a cte from simulator. This fails because twiddle and PID controller would not react fast enough and result full left and right turns every step like following showed:
+However, I was first thinking to run this logic every time I got a cte from the simulator. This fails because twiddle and PID controller would not react fast enough and result in full left and right turns every step like following showed:
 
 ![swiggle](./images/run_every_step.gif)
 
-As the result, more errors need to be added together to feed into the twiddle. At beginning of the tuning, I used the average of the error to find a range of PID value and reach the values faster. Later when I have a value, I will use sum of all errors to feed into the twiddle. 
+As the result, more errors need to be added together to feed into the twiddle. At beginning of the tuning, I used the average of the error to find a range of PID values and reach the values faster. Later when I have a value, I will use the sum of all errors to feed into the twiddle. 
 ### Tuning Process 
 Starting from  P=0,I=0,D=0 and stepping dp 1,1,1. After about 20 iteration of twiddle, I was able get PID value of P:2.5 I:0 D:10.
 
-I was able to observe a lot of overshoot and  oscillation at a slight left turn. Like below 
+I was able to observe a lot of overshoot and oscillation at a slight left turn. Like below 
 
 ![2.3-0.01-10](./images/2.3-0.01-10.gif)
 
-Tuning down P and I to 0.5 and 0.0001 gives a better result. D is at 5.  However, after this I observed during a sharp turn, the car would oscillate. I decide to increase D to decrease overshoot and increase P a bit to reduce rise time.Then I run tiwddle with initial value of
-`P= 0.531 I = 0.0001 D =9.6` 
+Tuning down P and I to 0.5 and 0.0001 gives a better result. D is at 5.  However, after this I observed during a sharp turn, the car would oscillate. I decide to increase D to decrease overshoot and increase P a bit to reduce rise time. Then I run twiddle with the initial value of
+`P= 0.531 I = 0.0001 D =9.6` At this point I value should be good, I only run P and D with dp value of [1,1] 
+
 ![0.5-0.0001-9.6](./images/0.5-0.0001-9.6.gif)
 
-After 7 iteration I found this final value:
+After 7 Iteration I get following value
+
 
 Kp|Ki|Kd
 ---|---|---
 0.8389|1.9e-5|10.6961
 
+![0.8-1e9-10](./images/0.8-0.0009-10.gif)
 
+### Conclusion
+In summary, the two values below would all work. I feel the twiddle would prefer more aggressive P and D to achieve faster error corrections. The lower P value should be more pleasant to sit in.
+
+Kp|Ki|Kd
+---|---|---
+0.8389|1.9e-5|10.6961
+0.5|0.0001|9.6
 ## Dependencies
 
 * cmake >= 3.5
