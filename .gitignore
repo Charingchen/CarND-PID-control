@@ -3,3 +3,12 @@ build
 tags
 .editorconfig
 .DS_Store
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/CarND-PID-control.iml
+video/0.5-.0001-9.6.mov
+video/2.3-0.01-10.mov
+video/run_every_step.mov
