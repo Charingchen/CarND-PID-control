@@ -17,14 +17,15 @@ void PID::Init(double Kp_, double Ki_, double Kd_) {
     Kp = Kp_;
     Ki = Ki_;
     Kd = Kd_;
-    
+
+}
+
+void PID::Init_p(vector<double> input_dp){
+    p = {Kp,Ki,Kd};
     p_error = 0;
     i_error = 0;
     d_error = 0;
-}
-
-void PID::Init_p(){
-    p = {Kp,Kd,Ki};
+    dp = input_dp;
 }
 
 void PID::UpdateError(double cte) {
@@ -41,7 +42,7 @@ double PID::TotalError() {
   /**
    * TODO: Calculate and return the total error
    */
-  return p_error * Kp + i_error * Ki + d_error * Kd;  // TODO: Add your total error calc here!
+  return -p_error * Kp -i_error * Ki - d_error * Kd;  // TODO: Add your total error calc here!
 
 }
 
@@ -62,7 +63,7 @@ void PID::twiddle(double current_err){
                 break;
                 
             case INCREMENT:
-                if ( current_err < best_err){
+                if (current_err < best_err){
                     best_err = current_err;
                     // Increase this parameter and save it for next iteration
                     dp[index] *= 1.1;
@@ -115,11 +116,13 @@ void PID::twiddle(double current_err){
 }
 
 void PID::print_output(double current_err){
-    std::cout << "Iteration #:" << iter
-    << " Best Error:"<< best_err <<" Current error:" << current_err
-    << " Current state:" << state
-    << "\nNext P:" << p[0] <<","<< p[1]<< ","<< p[2]
-    << std::endl;
+    std::cout
+    << "\n***********************************************************\nIteration " << iter
+    << " Best Error: "<< best_err <<" Current error: " << current_err
+    << " Current state: " << state << " Index " << index
+    << "\nNext P:    " << Kp <<","<< Ki<< ","<< Kd
+    << "\ndp:        " << dp[0] <<","<< dp[1]<< ","<< dp[2]
+    << "\n*************************************************************\n"<<std::endl;
 }
                   
 void PID::move_index(){

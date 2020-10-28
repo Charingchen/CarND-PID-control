@@ -38,7 +38,7 @@ class PID {
     
     
   void twiddle(double current_err);
-  void Init_p();
+  void Init_p(vector<double> input_dp);
   void move_index();
   void print_output(double current_err);
 

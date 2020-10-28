@@ -36,9 +36,12 @@ int main() {
   PID pid;
   /**
    * TODO: Initialize the pid variable.
+   *
    */
-    pid.Init(-0.09, -0.0005, -1.6);
-    pid.Init_p();
+    
+    pid.Init(0.8, 0.0001, 8);
+    pid.Init_p({0.278,0.0001,1.29147});
+   
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, 
                      uWS::OpCode opCode) {
@@ -47,6 +50,10 @@ int main() {
     // The 2 signifies a websocket event
       
     static double err_sum = 0.0;
+    static int run_counter = 0;
+    static bool off_road = false;
+    static const bool run_twiddle = true;
+      
     if (length && length > 2 && data[0] == '4' && data[1] == '2') {
       auto s = hasData(string(data).substr(0, length));
 
@@ -67,20 +74,57 @@ int main() {
            * NOTE: Feel free to play around with the throttle and speed.
            *   Maybe use another PID controller to control the speed!
            */
+            
+          
+            
             pid.UpdateError(cte);
             steer_value = pid.TotalError();
-            err_sum += steer_value;
-          // DEBUG
-          std::cout << "CTE: " << cte << " Steering Value: " << steer_value 
-                    << std::endl;
-          // Run twiddle if the it finish running or run outside of the lane
+//            std::cout << "CTE: " << cte << " Steering Value: " << steer_value
+//            << std::endl;
+            if (steer_value > 1) steer_value = 1;
+            else if (steer_value < -1) steer_value = -1;
+            
+            // make err positive and reward < 1 cte but power by 2
+            // DEBUG
+//            std::cout << "CTE: " << cte << " Steering Value: " << steer_value
+//            << std::endl;
+            if (run_twiddle){
+                // skip initial 100 cte, meaning only get only it is steablize
+                if (run_counter> 100){
+                    err_sum += cte*cte;
+                    if (cte > 5) {
+                        off_road = true;
+                    }
+                }
+            
+                run_counter += 1;
+            
+              // Run twiddle if the it finish running or run outside of the lane
+                if (run_counter > 800 || off_road){
+                    double average_err = err_sum/(run_counter - 100);
+                    if (off_road){
+                        average_err += 1000;
+                    }
+                    
+                    pid.twiddle(average_err);
+                    pid.print_output(average_err);
+                    
+                    run_counter = 0;
+                    err_sum = 0.0;
+                    off_road = false;
+                    //Resetting simulator
+                    std::string msg("42[\"reset\", {}]");
+                    ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
+                }
+            }
+            
             
             
           json msgJson;
           msgJson["steering_angle"] = steer_value;
           msgJson["throttle"] = 0.3;
           auto msg = "42[\"steer\"," + msgJson.dump() + "]";
-          std::cout << msg << std::endl;
+//          std::cout << msg << std::endl;
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
         }  // end "telemetry" if
       } else {
